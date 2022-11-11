@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #303146;
+}
+
+.container {
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+}
+
+.top {
+  background-color: #3986f9;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 5px solid black;
+}
+
+.top-nav {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(57, 134, 249);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  align-items: center;
+}
+.top-nav .nav-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 35px;
+  margin-left: 15px;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 500ms;
+}
+.top-nav .nav-icons {
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 500ms;
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 10px;
+}
+.top-nav .nav-icons span {
+  margin-right: 16px;
+}
+.top-nav .nav-icons span:hover {
+  color: black;
+}
+
+.profile-pic {
+  margin-top: -165px;
+  z-index: 1;
+}
+
+.hide-title {
+  transform: translate(-110%);
+  -webkit-transform: translate(-110%);
+}
+
+.hide-icons {
+  transform: translate(105%);
+  -webkit-transform: translate(105%);
+}
+
+.hide {
+  display: none;
+}
+
+.image {
+  border-radius: 9999px;
+  border: 5px solid black;
+  display: block;
+}
+
+.bottom {
+  width: 100%;
+  background-color: #303146;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.header {
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
+  z-index: 1;
+}
+
+.sub-header {
+  color: #bab3b3;
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+}
+
+.icons {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #bab3b3;
+}
+.icons span {
+  margin: 8px;
+}
+.icons span:hover {
+  color: #3986f9;
+}
+
+.email {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.email:hover .email-hover {
+  opacity: 0.8;
+}
+
+.email-hover {
+  position: absolute;
+  width: 166px;
+  background-color: #2a2b2c;
+  border-radius: 8px;
+  color: #bab3b3;
+  opacity: 0;
+}
+
+.on-body {
+  top: 80%;
+  right: -74px;
+  margin: 8px 0px;
+  padding: 5px 3px;
+}
+
+.on-nav {
+  top: 80%;
+  right: 0px;
+  margin: 6px 0px;
+  padding: 3px 2px;
+}
+
+.javascript {
+  color: #F0DB66;
+}
+
+.django {
+  color: #00AB7C;
+}
+
+.sass {
+  color: #D56698;
+}
+
+.websocket {
+  color: #FF6528;
+}
+
+.bootstrap {
+  color: #593D78;
+}
+
+.flask {
+  color: #E3192E;
+}
+
+.arrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow svg {
+  cursor: pointer;
+}
+
+#project-heading {
+  color: white;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.location {
+  width: 100%;
+  height: 100px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project {
+  max-width: 900px;
+  backdrop-filter: blur(6px);
+  max-height: 620px;
+  background-color: #2a2b2c;
+  border-radius: 20px;
+  margin: 16px 8px;
+}
+.projects .project-details {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects .project-details .all-tech {
+  color: white;
+  display: flex;
+  margin: 10px 0px;
+  flex-direction: row;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.projects .project-details .all-tech svg {
+  transition: all 0.2s ease;
+  opacity: 0.7;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.projects .project-details .all-tech svg:hover {
+  opacity: 1;
+}
+.projects .project-img {
+  width: 100%;
+  display: block;
+}
+.projects .project-title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+}
+.projects .project-title span {
+  font-weight: 300;
+}
+
+.github, .linkedin, .email {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tech-icon {
+  height: 1.8em;
+  width: 1.8em;
+}
+
+.techname {
+  font-size: 0.75rem;
+  background-color: #303146;
+  padding: 3px 6px;
+  color: rgba(248, 248, 248, 0.914);
+  border-radius: 6px;
+  opacity: 0;
+  bottom: -70%;
+  position: absolute;
+  transition: opacity 0.2s;
+}
+
+.tech {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tech:hover .techname {
+  opacity: 0.8;
+}
+
+.project-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 28px 0px;
+}
+.project-footer .view-code, .project-footer .view-demo {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.project-footer .view-code:hover, .project-footer .view-demo:hover {
+  color: #bab3b3;
+}
+.project-footer .view-code svg, .project-footer .view-demo svg {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 746px) {
+  .header {
+    line-height: 80px;
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+/*# sourceMappingURL=styles.css.map */
