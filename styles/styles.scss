@@ -1,4 +1,4 @@
-$primary: #303146;
+$primary: #303135;
 $secondary: #3986f9;
 $subtext: #bab3b3;
 $javascript: #F0DB66;
@@ -38,7 +38,7 @@ body {
 }
 .container{
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     text-align: center;
 }
 .top {
@@ -47,7 +47,7 @@ body {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    border-bottom: 5px solid black;
+    border-bottom: 4px solid black;
     // z-index: -1;
     
 }
@@ -108,7 +108,7 @@ body {
 }
 .image {
     border-radius: 9999px;
-    border: 5px solid black;
+    border: 4px solid rgb(10, 10, 10);
     display: block;
     // margin-bottom: 75px;
     // box-shadow: rgb(0, 0, 0) 0px 3px 8px;
@@ -125,13 +125,13 @@ body {
 .header {
     // margin-top: 75px;
     color: white;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 800;
         z-index: 1;
 }
 .sub-header {
-    color: $subtext;
-    font-size: 1.75rem;
+    color: #bab3c0;
+    font-size: 1.25rem;
     letter-spacing: 2px;
 }
 
@@ -156,12 +156,13 @@ body {
     &:hover{
         .email-hover{
             opacity: 0.8;
+            display: block;
         }
     }
 }
 .email-hover {
     position: absolute;
-    
+    display: none;
     width: 166px;
     
     background-color: #2a2b2c;

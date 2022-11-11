@@ -25,19 +25,10 @@ document.body.addEventListener("touchmove", onScroll);
 document.addEventListener("scroll", onScroll);
 function onScroll() {
     console.log(window.scrollY);
-    // console.log(subHeader.getBoundingClientRect().top);
-    // if (banner.clientHeight - window.scrollY <= 90) {
-    //     topBanner.classList.add("sticky");
-    // } else {
-    //     topBanner.classList.remove("sticky");
-    // }
     if (window.scrollY >= 450 && window.scrollY <= 1050) {
-        console.log(window.scrollY);
-        // topBanner.style.opacity = (-2/15) * window.scrollY + 160;
         topBanner.alpha((-2 / 15) * window.scrollY + 160);
         navTitle.style.opacity = 1;
     } else if (window.scrollY > 1050) {
-        // topBanner.style.opacity = 0.7;
         topBanner.alpha(20);
     } else if (window.scrollY < 450) {
         topBanner.alpha(100);
