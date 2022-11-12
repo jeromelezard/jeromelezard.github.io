@@ -341,14 +341,22 @@ body {
     
 }
 
-@media screen and (max-width: 746px) {
+.last-name-nav {
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 668px) {
     .header{
-        line-height: 80px;
+        line-height: 60px;
+    }
+    .last-name {
+        letter-spacing: 4px;
     }
     // .sub-header{
     //     line-height: 80px;
     // }
 }
+
 
 
 @keyframes bounce {
