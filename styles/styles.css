@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap");
+/* Media queries */
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +23,7 @@ body {
 
 .container {
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   text-align: center;
 }
 
@@ -32,7 +33,7 @@ body {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #283b63;
 }
 
 .top-nav {
@@ -41,6 +42,7 @@ body {
   position: fixed;
   background-color: rgb(57, 134, 249);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -92,7 +94,7 @@ body {
 
 .image {
   border-radius: 9999px;
-  border: 4px solid rgb(10, 10, 10);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   display: block;
 }
 
@@ -193,6 +195,7 @@ body {
 }
 
 .arrow {
+  margin-top: -8em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -232,8 +235,13 @@ body {
   flex-direction: row;
   padding: 15px 20px;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .projects .project-details {
+    flex-wrap: wrap;
+  }
 }
 .projects .project-details .all-tech {
   color: white;
@@ -246,6 +254,7 @@ body {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  flex-shrink: 0;
 }
 .projects .project-details .all-tech svg {
   transition: all 0.2s ease;
@@ -261,13 +270,27 @@ body {
   display: block;
 }
 .projects .project-title {
+  display: flex;
+  flex-direction: column;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-weight: 500;
   margin: 0;
   color: white;
+  flex-grow: 1;
 }
-.projects .project-title span {
+@media (max-width: 576px) {
+  .projects .project-title {
+    text-align: center;
+    width: 100%;
+  }
+}
+.projects .project-title .title {
+  font-weight: 500;
+}
+.projects .project-title .desc {
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
 }
 
