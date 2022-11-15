@@ -23,6 +23,7 @@ $flask: #E3192E;
 
 /* Media queries */
 $screen-sm-min: 1386px;
+$screen-m-min: 417px;
 $screen-lg-min: 992px;
 @mixin sm {
     @media (max-width: #{$screen-sm-min}) {
@@ -36,8 +37,8 @@ $screen-lg-min: 992px;
     }
 }
 
-@mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
+@mixin m {
+    @media (max-width: #{$screen-m-min}) {
         @content;
     }
 }
@@ -93,11 +94,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 0;
+    z-index: 1;
     align-items: center;
     .nav-title {
         color: white;
-        // display: flex;
+        // display: flex;f
         font-size: 2.5rem;
         // flex-direction: column;
         font-weight: 800;
@@ -255,10 +256,11 @@ body {
 .arrow {
     margin-top: -8em;
     width: 100%;
+    position:static;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: -1;
     svg {
         cursor: pointer;
     }
@@ -406,6 +408,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    @include m {
+        justify-content: flex-start;
+    }
     .view-demo {
         color: #c4302b ;
     }
@@ -442,7 +447,7 @@ body {
     // }
 }
 .footer{
-    height: 200px;
+    height: 150px;
     width: 100%;
     background-color: $secondary;
     margin-top: 100px;

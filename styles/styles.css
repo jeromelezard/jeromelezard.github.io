@@ -53,7 +53,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 0;
+  z-index: 1;
   align-items: center;
 }
 .top-nav .nav-title {
@@ -209,10 +209,11 @@ body {
 .arrow {
   margin-top: -8em;
   width: 100%;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: -1;
 }
 .arrow svg {
   cursor: pointer;
@@ -361,6 +362,11 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
+@media (max-width: 417px) {
+  .project-footer {
+    justify-content: flex-start;
+  }
+}
 .project-footer .view-demo {
   color: #c4302b;
 }
@@ -392,7 +398,7 @@ body {
   }
 }
 .footer {
-  height: 200px;
+  height: 150px;
   width: 100%;
   background-color: #495783;
   margin-top: 100px;
