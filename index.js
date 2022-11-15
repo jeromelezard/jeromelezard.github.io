@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.body.addEventListener("touchmove", onScroll);
 document.addEventListener("scroll", onScroll);
 function onScroll() {
-    console.log(window.scrollY);
+    console.log(
+        document.getElementById("location").getBoundingClientRect().top
+    );
     if (window.scrollY >= 450 && window.scrollY <= 1050) {
         topBanner.alpha((-2 / 15) * window.scrollY + 160);
         navTitle.style.opacity = 1;
@@ -33,7 +35,7 @@ function onScroll() {
     } else if (window.scrollY < 450) {
         topBanner.alpha(100);
     }
-    if (icons.getBoundingClientRect().top <= 65) {
+    if (document.getElementById("location").getBoundingClientRect().top <= 20) {
         navTitle.classList.remove("hide-title");
         navIcons.classList.remove("hide-icons");
     } else {
