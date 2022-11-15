@@ -29,6 +29,7 @@ body {
 .hero-content {
   text-align: center;
   z-index: 9999;
+  margin-bottom: 100px;
 }
 
 .top {
@@ -41,13 +42,14 @@ body {
 }
 
 .top-nav {
-  height: 90px;
+  height: 0px;
   width: 100%;
   position: fixed;
   top: 0;
   background-color: #495783;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  transition: height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -154,6 +156,16 @@ body {
   border-radius: 8px;
   color: #bab3b3;
   opacity: 0;
+}
+
+.tooltip {
+  border-radius: 8px;
+  background-color: #2a2b2c;
+  color: #bab3b3;
+  opacity: 0;
+}
+.tooltip:hover {
+  opacity: 0.8;
 }
 
 .on-body {

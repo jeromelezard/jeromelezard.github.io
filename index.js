@@ -36,11 +36,21 @@ function onScroll() {
         topBanner.alpha(100);
     }
     if (document.getElementById("location").getBoundingClientRect().top <= 20) {
+        topBanner.style.height = "90px";
+        navTitle.style.transitionDelay = "0.2s";
+        navIcons.style.transitionDelay = "0.2s";
+        topBanner.style.transitionDelay = "0s";
         navTitle.classList.remove("hide-title");
         navIcons.classList.remove("hide-icons");
     } else {
         navTitle.classList.add("hide-title");
         navIcons.classList.add("hide-icons");
+        navIcons.style.transitionDelay = "0s";
+        navTitle.style.transitionDelay = "0s";
+        topBanner.style.transitionDelay = "0.2s";
+        // navTitle.classList.add("hide-title");
+        // navIcons.classList.add("hide-icons");
+        topBanner.style.height = "0px";
     }
 }
 
