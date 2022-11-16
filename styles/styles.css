@@ -117,7 +117,7 @@ body {
 }
 
 .sub-header {
-  color: #bab3c0;
+  color: #bab3b3;
   z-index: 9999;
   font-size: 1.25rem;
   letter-spacing: 2px;
@@ -152,6 +152,7 @@ body {
   position: absolute;
   display: none;
   width: 166px;
+  text-align: center;
   background-color: #2a2b2c;
   border-radius: 8px;
   color: #bab3b3;
@@ -264,13 +265,19 @@ body {
 .projects .project-details {
   display: flex;
   flex-direction: row;
-  padding: 15px 0px;
+  padding: 15px 0px 5px 0px;
   align-items: center;
   flex-wrap: nowrap;
 }
 @media (max-width: 1386px) {
   .projects .project-details {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 443px) {
+  .projects .project-details {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .projects .project-details .all-tech {
@@ -317,6 +324,7 @@ body {
   font-size: 0.7em;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
+  margin-bottom: 5px;
 }
 
 .github, .linkedin, .email {
@@ -341,10 +349,6 @@ body {
   transition: opacity 0.2s;
 }
 
-.view {
-  width: 90px;
-}
-
 .tech {
   position: relative;
   display: flex;
@@ -358,31 +362,27 @@ body {
 
 .project-footer {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  color: #bab3b3;
 }
-@media (max-width: 417px) {
-  .project-footer {
-    justify-content: flex-start;
-  }
+.project-footer .view-icons {
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.project-footer .view-icons:hover {
+  opacity: 1;
+  color: white;
+}
+.project-footer .view-code, .project-footer .view-demo {
+  height: 1em;
+  width: 1em;
+  color: #bab3b3;
+  margin-right: 3px;
 }
 .project-footer .view-demo {
-  color: #c4302b;
-}
-.project-footer .view-code {
-  color: black;
-}
-.project-footer svg {
-  margin-right: 10px;
-  transition: opacity 0.2s;
-  opacity: 0.7;
-  height: 1.8em;
-  width: 1.8em;
-  cursor: pointer;
-}
-.project-footer svg:hover {
-  opacity: 1;
+  margin-left: 10px;
 }
 
 .last-name-nav {
@@ -396,11 +396,14 @@ body {
   .last-name {
     letter-spacing: 4px;
   }
+  .sub-header {
+    margin: 15px 0px 10px 0px;
+  }
 }
 .footer {
   height: 150px;
   width: 100%;
-  background-color: #495783;
+  background-color: #49516a;
   margin-top: 100px;
   display: flex;
   align-items: center;
@@ -410,11 +413,12 @@ body {
 .footer-icon {
   height: 2em;
   width: 2em;
+  color: white;
   transition: color 0.2s;
   margin: 0px 10px;
 }
 .footer-icon:hover {
-  color: white;
+  color: #303135;
 }
 
 @keyframes bounce {
