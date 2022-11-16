@@ -310,7 +310,7 @@ body {
     .project-details{
         display: flex;
         flex-direction: row;
-        padding: 15px 0px 5px 0px;
+        padding: 15px 0px 0px 0px;
         align-items: center;
         flex-wrap: nowrap;
 
@@ -429,14 +429,16 @@ body {
         }
     }
     .view-code, .view-demo {
-        height: 1em;
-        width: 1em;
+        height: 1.2em;
+        width: 1.2em;
         color: $subtext;
         margin-right: 3px;
         
     }
     .view-demo {
-        margin-left: 10px;
+        margin-left: 20px;
+        height: 1.4em;
+        width: 1.4em;
     }
 
 }
@@ -462,7 +464,8 @@ body {
 .footer{
     height: 150px;
     width: 100%;
-    background-color: darken(desaturate($secondary, 10%), 5%);
+    // background-color: darken(desaturate($secondary, 20%), 5%);
+    background-color: #232323;
     margin-top: 100px;
     display: flex;
     align-items: center;
